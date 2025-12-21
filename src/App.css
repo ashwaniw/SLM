@@ -1,38 +1,362 @@
-.App {
-  text-align: center;
-}
 
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Roboto:wght@100..900&display=swap');
+
+body {
+  background-color: #F0FCFF;
+  font-family: 'Roboto',Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  color: #2D2D2D;
+  line-height: 1;
+  padding: 0;
+  margin: 0;
+}
+.blue {
+  color: #1E25FF;
+}
+.black {
+  color: #000000;
+}
+.colorPrimary{
+  color: #03709D;
+}
+.colorSecondary{
+  color: #BEBEBE;
+}
+a {
+    transition: all 0.3s ease-out;
+}
+p {
+  font-family: 'Roboto',Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+}
 .App-logo {
-  height: 40vmin;
+  max-width: 2.2rem;
   pointer-events: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
 .App-link {
-  color: #61dafb;
+  color: #747474;
+  text-decoration: none;
+  padding: 0 0.5rem;
+  transition: all 0.3s ease-out;
+
+  &:hover {
+    color: #1DA2D9;
+  }
+}
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+.block-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.button {
+    background-color: #1DA2D9;
+    padding: 0.5rem 1rem;
+    color: #ffffff;
+    font-size: 0.85rem;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-left: 10px;
+    font-weight: 600;
+    transition: all 0.3s ease-out;
+
+    &:hover {
+      background-color: #0b77a5;
+    }
+}
+.btnLarge {
+    background-color: #1DA2D9;
+    padding: 1.1rem 1.5rem;
+    color: #ffffff;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-right: 2.5rem;
+    font-weight: 400;
+    transition: all 0.3s ease-out;
+
+    &:hover {
+      background-color: #0b77a5;
+    }
+}
+.btnxLarge {
+    background-color: #ffffff;
+    padding: 1rem 3.5rem 1rem 1rem;
+    color: #8E8E8E;
+    font-size: 1rem;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 400;
+    transition: all 0.3s ease-out;
+    border: 1px solid #ffffff;
+    box-shadow: 0px 0px 8px 0px #d1d1d1;
+    line-height: 1.5;
+
+    &:hover {
+      background-color: #f9f9f9;
+      border: 1px solid #adadad;
+    }
+}
+.btn-secondary {
+    background-color: #ffffff;
+    color: #595959;
+    border: 1px solid #c5c5c5;
+}
+.flex1 {
+  flex: 1;
+}
+/* app header footer css */
+.App-header-footer { 
+    background-color: #ffffff;
+    color: #747474;
+    padding: 0.5rem 1rem;
+    box-shadow: 0px 0px 8px 0px #aec2cb;
+
+        .left{    
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          .app {
+              padding: 0 0.75rem;
+            }
+          .app-title {
+            margin: 0;
+            padding: 0;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #1C1C1C;
+          }
+          small {
+            font-size: 0.85rem;
+            font-weight: 300;
+            color: #747474;
+          }
+        }
+        .right {
+          display: flex;
+          align-items: center;
+        }
+}
+/* END app header footer css */
+
+.mainContent {
+  /* min-height: 80vh; */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.Features-container {
+  padding: 1rem;
+
+  .title {
+    font-family: 'Roboto',Arial, Helvetica, sans-serif;
+    font-size: 2.7rem;
+    font-weight: 300;   
+    line-height: 1.2;
+  } 
+  p{
+      font-size: 1.1rem;
+        margin: 0 0 2.5rem;
+    }
+  .features {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    strong {
+      font-weight: 900;
+    }
   }
-  to {
-    transform: rotate(360deg);
+
+  .right {
+    padding: 2rem 0 0 3rem
   }
+
+}
+.btnContainer {
+    align-items: center;
+    margin-bottom: 3rem;
+}
+.searchContainer {
+    background-color: #ffffff;
+    padding: 5rem 2rem 1rem;
+    color: #000000;
+    border-radius: 20px;
+    transition: all 0.3s ease-out;
+    border: 1px solid #ffffff;
+    text-align: center;
+    box-shadow: 0px 0px 8px 0px #ababab;
+    position: relative;
+
+    .title {
+      font-size: 1.7rem;
+      font-weight: 400;
+      margin-bottom: 14rem;
+    }
+    .searchInput {
+      border: 4px solid #1DA2D9;
+      min-width: 85%;
+      padding: 1rem;
+      border-radius: 2rem;
+
+      &:focus {
+        border: 4px solid #047fb3;
+        outline: 0;
+      }
+    }
+    .searchbox {
+      position: absolute;
+      bottom: 1rem;
+      left: 0;
+      right: 0;
+      z-index: 1;
+
+      p {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        margin: 0 0 0.75rem;
+      }
+    }
+}
+.Core-capabilities {
+  padding: 0.5rem 1rem;
+
+  .block-container {
+    flex-direction: column;
+  }
+  .capability-title {
+    margin-bottom: 0;
+  }
+  .short-description {
+    margin: 0;
+    font-size: 1.3rem;
+  }
+  .capabilities {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 2rem 0;
+    column-gap: 2rem;
+    row-gap: 2rem;
+
+    .btnxLarge {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 1rem 4.5rem 1rem 1rem;
+      
+      .icon {
+        display: flex;
+        color: #1DA2D9;
+        font-size: 1.5rem;
+        align-items: center;
+      }
+      .block {
+        padding-left: 1rem;
+        display: flex;
+        flex-direction: column;
+
+        .button {
+          margin-left: 0;
+          margin-top: 1rem;
+          max-width: 2rem;
+        }
+      }
+      .capability-title {
+        font-size: 1rem;
+        margin: 0;
+        color: #2D2D2D;
+      }
+      .short-desc {
+        font-weight: 300;
+        font-size: 0.9rem;
+        color: #505050;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+.App-header-footer {
+    .left {
+        .app {
+            padding: 0 0.5rem;
+        }
+      .app-title {
+        font-size: 1rem;
+      }
+      small {
+            font-size: 0.75rem;
+        }
+    }
+    .App-link {
+      padding: 0 0.2rem;
+      font-size: 0.85rem;
+  }
+    .button {
+      padding: 0.5rem;
+  }
+  .App-logo {
+    max-width: 2rem;
+  }
+}
+.btnLarge {
+    background-color: #1DA2D9;
+    padding: 1rem;
+    font-size: 1rem;
+    margin-right: 1rem;
+  }
+  .btn-secondary {
+      background-color: #ffffff;
+  }
+.Features-container {
+  .title {
+        margin: 0;
+        font-size: 1.8rem;
+    }
+  .block-container {
+    flex-direction: column;
+  }
+    .features {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        .btnxLarge {
+          margin-bottom: 1.5rem;
+          padding: 1rem 2rem 1rem 1rem;
+        }
+    }
+    .right {
+      padding: 0;
+      .searchContainer {
+        padding: 1rem 1rem 0rem;
+        .title {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+        .searchbox {
+          position: relative;
+          margin-top: 2rem;
+
+          p {
+            font-size: 0.75rem;
+          }
+        }
+      }
+    }
+    p {
+        font-size: 1rem;
+    }
+}
+.Core-capabilities {
+  .capabilities {
+      grid-template-columns: 1fr;
+      padding: 1.5rem 0;
+      row-gap: 1.5rem;
+  }
+  .short-description {
+      font-size: 1rem;
+  }
+}
 }
