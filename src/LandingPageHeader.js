@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import docIcon from '../src/images/docIcon.png'
+import { GoPlus } from "react-icons/go";
 import './App.css';
 
 function LandingPageHeader() {
@@ -32,7 +33,13 @@ function LandingPageHeader() {
                   <h1 className='title'>"Your Data — Private. Protected. Powerful."</h1>
                   <div className='searchbox'>
                     <p style={{alignItems: 'center'}}>Kindly attach the necessary document <img src={docIcon} alt='' /> for review</p>
-                    <input type='text' className='searchInput' placeholder='Supported file types include PDF, PPT, DOC, and TXT' />
+                    <div className='searchInputWrapper'>
+                      <span className='plusIcon'>
+                        <input class="formFile" type="file" id="formFile" />
+                        <GoPlus className='icon' />
+                      </span>
+                      <input type='text' className='searchInput' placeholder='Supported file types include PDF, PPT, DOC, and TXT' />
+                    </div>
                   </div>
                 </div>
               </div>

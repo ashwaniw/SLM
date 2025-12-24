@@ -1,6 +1,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Roboto:wght@100..900&display=swap');
-
+ ::placeholder {
+    color: #b6b6b6;
+    opacity: 1; 
+  }
 body {
   background-color: #F0FCFF;
   font-family: 'Roboto',Arial, Helvetica, sans-serif;
@@ -195,14 +198,48 @@ p {
       font-weight: 400;
       margin-bottom: 14rem;
     }
-    .searchInput {
-      border: 4px solid #1DA2D9;
-      min-width: 85%;
-      padding: 1rem;
-      border-radius: 2rem;
+    .searchInputWrapper {
+      display: flex;
+      position: relative;
+      justify-content: center;
+      align-items: center;
 
+      .plusIcon {
+        position: absolute;
+        left: 2rem;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+
+        .formFile  {
+          opacity: 0;
+          width: 1.5rem;
+          height: 1.5rem;
+          position: absolute;
+          z-index: 1;
+        }
+        .icon {
+          font-size: 1.5rem;
+        }
+      }
+    }
+    .searchInput {
+      border: 3px solid #1DA2D9;
+      border-radius: 2rem;
+      display: block;
+      box-sizing: content-box;
+      width: 84%;
+      padding: 1rem 1rem 1rem 2.8rem;
+      font-size: 1rem;
+      font-weight: 300;
+      line-height: 1.5;
+      color: #1DA2D9;
+      background-color: #fff;
+      transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+     
       &:focus {
-        border: 4px solid #047fb3;
+        border: 3px solid #047fb3;
         outline: 0;
       }
     }
@@ -246,6 +283,7 @@ p {
       flex-direction: row;
       align-items: center;
       padding: 1rem 4.5rem 1rem 1rem;
+      min-height: 6.4rem;
       
       .icon {
         display: flex;
@@ -275,6 +313,11 @@ p {
         color: #505050;
       }
     }
+  }
+}
+.quickApps {
+  .btnxLarge {
+    min-height: 10rem;
   }
 }
 
